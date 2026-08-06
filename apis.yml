@@ -1,8 +1,19 @@
 aid: ancora-heart
 name: Ancora Heart
-description: 'Ancora Heart is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Ancora Heart, Inc. is a privately held medical device company headquartered
+  at 4001 Burton Drive, Santa Clara, California, developing transcatheter therapies
+  for people living with heart failure. Its lead product is the AccuCinch Ventricular
+  Restoration System, a completely transcatheter implant designed to reduce the size
+  of an enlarged left ventricle and restore cardiac structure and function in patients
+  with heart failure with reduced ejection fraction (HFrEF) who remain symptomatic
+  on guideline-directed medical therapy. The device is investigational and is being
+  evaluated in the CORCINCH-HF study (NCT04331769), a prospective randomized international
+  trial enrolling up to 400 patients across as many as 80 centers, alongside the CORCINCH-EU
+  program in Europe. Ancora Heart is a medical device manufacturer rather than a software
+  company: it publishes a marketing and clinical-information website for patients and
+  physicians, and operates no public developer program, API, or SDK.'
 url: https://raw.githubusercontent.com/api-evangelist/ancora-heart/refs/heads/main/apis.yml
+image: https://www.ancoraheart.com/wp-content/themes/ancora/public/images/NEW_AncoraLogo_Color.svg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +23,13 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Medical Devices
+- Health Care
+- Cardiology
+- Heart Failure
+- Clinical Trials
+- Transcatheter Therapy
+- Medical Technology
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,54 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ancora-heart-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.ancoraheart.com/
+- type: About
+  url: https://www.ancoraheart.com/about-us/
+- type: Support
+  url: https://www.ancoraheart.com/contact/
+- type: Blog
+  url: https://www.ancoraheart.com/in-the-news/
+- type: BlogRSS
+  url: https://www.ancoraheart.com/feed/
+- type: TermsOfService
+  url: https://www.ancoraheart.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.ancoraheart.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/24214239/
+- type: Twitter
+  url: https://twitter.com/AncoraHeart
+- type: YouTube
+  url: https://www.youtube.com/channel/UCufcpLIcuygJzvUs1tlHwUA
+- type: Facebook
+  url: https://www.facebook.com/AncoraHeart
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Ancora Heart manufactures an implantable cardiac device (the AccuCinch Ventricular
+    Restoration System) and runs ancoraheart.com purely as a WordPress marketing and
+    clinical-trial information site; the only machine-readable endpoint on the domain
+    is the WordPress core REST API that ships with the CMS, and every contract-discovery
+    path returns the site's soft-404 HTML shell with a 200.
+  evidence:
+  - url: https://www.ancoraheart.com/openapi.json
+    status: 200
+  - url: https://www.ancoraheart.com/this-path-definitely-does-not-exist-9x8z7
+    status: 200
+  - url: https://www.ancoraheart.com/.well-known/agent-card.json
+    status: 200
+  - url: https://www.ancoraheart.com/.well-known/security.txt
+    status: 404
+  - url: https://www.ancoraheart.com/llms.txt
+    status: 404
+  - url: https://www.ancoraheart.com/wp-json/
+    status: 200
+  checked: '2026-08-06'
