@@ -13,6 +13,17 @@ description: 'Ancora Heart, Inc. is a privately held medical device company head
   company: it publishes a marketing and clinical-information website for patients and
   physicians, and operates no public developer program, API, or SDK.'
 url: https://raw.githubusercontent.com/api-evangelist/ancora-heart/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.ancoraheart.com/wp-content/themes/ancora/public/images/NEW_AncoraLogo_Color.svg
 x-type: company
 x-source: harvest:secondary-market
